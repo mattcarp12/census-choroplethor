@@ -63,7 +63,8 @@ choropleth = L.geoJson(null, {
 }).addTo(map);
 
 function geo_select_change() {
-  fetch('http://localhost:5000/shapes/' + document.getElementById("geo-select").value)
+  //fetch('http://localhost:5000/shapes/' + document.getElementById("geo-select").value)
+  fetch(process.env.MONGODB_URI + '/shapes/' + document.getElementById("geo-select").value)
     .then(res => res.json())
     .then(res => {
       choropleth.remove();
