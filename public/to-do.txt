@@ -1,0 +1,5 @@
+- fix shapefiles to remove unnecessary data
+
+- make dynamic dropdowns to select data
+    - make variables determined by variable group
+    - 

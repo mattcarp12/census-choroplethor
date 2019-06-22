@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Choropleth Tutorial - Leaflet</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./stylesheets/main.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+<!-- 
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script> -->
+
+    <!-- <script src="/scripts/leaflet/dist/leaflet.css"></script> -->
+    <script src="/scripts/leaflet/dist/leaflet.js"></script>
+    <script src="/scripts/leaflet-choropleth/dist/choropleth.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <h1>Census Choroplethor</h1>
+            <p>Interactively create choropleths with data from the US Census</p>
+        </header>
+
+        <aside id='sidebar' class="sidebar">
+
+            <h4>Geography</h4>
+            <select id="geo-select">
+                <option selected disabled hidden value='default'>Choose geography</option>
+                <option value="states">State</option>
+                <option value="counties">County</option>
+                <!-- <option value="congress">Congressional District</option> -->
+            </select>
+
+            <h4>Variable Group</h4>
+            <select disabled id="variable-group-select">
+                <option selected disabled hidden value='default'>Choose variable group</option>
+            </select>
+
+            <h4>Variable</h4>
+            <select id="variable-select" disabled>
+                <option selected disabled hidden value='default'>Choose variable</option>
+            </select>
+
+        </aside>
+
+        <article class="content">
+            <div id='map'></div>
+        </article>
+    </div>
+
+
+    <script type="text/javascript" src="./shapefiles/shapes.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
