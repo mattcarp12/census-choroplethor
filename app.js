@@ -1,7 +1,8 @@
 var express = require('express');
 var monk = require('monk');
 //var db = monk('localhost:27017/shapes')
-var db = monk('mongodb://dbuser:dbpass1@ds261486.mlab.com:61486/heroku_xtwr6bmx')
+//var db = monk('mongodb://dbuser:dbpass1@ds261486.mlab.com:61486/heroku_xtwr6bmx')
+var db = monk('MONGODB_URI')
 var app = express();
 
 var shapesRouter = require('./routes/shapes');
