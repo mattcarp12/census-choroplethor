@@ -3,7 +3,7 @@ let var_group_select = document.getElementById('variable-group-select');
 let var_select = document.getElementById('variable-select');
 const census_url = "https://api.census.gov/data/2017/acs/acs5/profile?get="
 const census_key = "48337155cf6d6ed514fe6ecd2a4dc3670f2e3f25"
-let DB_URI = process.env.MONGODB_URI
+let DB_URI = 'https://census-choroplethor.herokuapp.com'
 let shapes;
 
 
@@ -66,7 +66,7 @@ choropleth = L.geoJson(null, {
 
 function geo_select_change() {
   //fetch('http://localhost:5000/shapes/' + document.getElementById("geo-select").value)
-  let URL = process.env.MONGODB_URI + '/shapes/' + document.getElementById("geo-select").value 
+  let URL = DB_URI + '/shapes/' + document.getElementById("geo-select").value 
   fetch(URL)
     .then(res => res.json())
     .then(res => {
