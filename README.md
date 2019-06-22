@@ -1,3 +1,3 @@
 # census-choroplethor
 
-## Dynamically create choropleths using US Census data
+Dynamically create choropleths using US Census data
